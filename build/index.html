@@ -10,7 +10,100 @@
   <meta http-equiv="cleartype" content="on">
 
 </head>
+
 <body>
+	<main>
+
+	<form>
+
+	<!--topsection-->
+		<header> 
+			<h1>Sign up for Whoo!</h1>
+				<p>50 projects, 500 images, 10 videos, domain binding, and technical support.</p>
+		</header>
+
+	<!--nameportfolio-->
+		<fieldset> 
+			<aside>1</aside>
+			<h2>First, name your portfolio</h2>
+
+			<label for="portfolio_name">Portfolio name</label><br>
+			<input id="portfolio_name" type="text" name="textfield"><br>
+
+			<label for="portfolio_address">Portfolio address</label><br>
+			<input id="portfolio_address" type="url" name="portfolio" placeholder=".sample.com">
+		</fieldset>
+
+	<!--acountdetails-->
+		<fieldset>
+			<aside>2</aside>
+			<h2>Now, enter your account details</h2>
+
+			<label for="account_name">Name</label><br>
+			<input id="account_name" type="text" name="textfield"><br>
+
+			<label for="account_email">Email</label><br>
+			<input id="account_email" type="email" name="email"><br>
+			<p>NOTE: We'll never share your email, promise.</p>
+
+			<label for="account_password">Password</label><br>
+			<input id="account_password" type="text" name="textfield">
+		</fieldset>
+
+	<!--paymentinfo-->
+		<fieldset>
+			<aside>3</aside>
+			<h2>Finally, enter your payment information</h2>
+
+			<label for="card_number">Card Number:</label><br>
+			<input id="card_number" type="text" name="textfield" maxlength="16"><br>
+
+			<label for="security_code">Security Code:</label><br>
+			<input id="security_code" type="text" name="textfield" maxlength="4"><br>
+
+			<!--expiration_month_year-->
+			<label for="expirationDate_month">Expiration date</label><br>
+			<select id="expirationDate_month" placeholder="Month" name="Month">
+			<option value="0">Month</option>
+			<option value="1">January</option>
+			<option value="2">February</option>
+			<option value="3">March</option>
+			<option value="4">April</option>
+			<option value="5">May</option>
+			<option value="6">June</option>
+			<option value="7">July</option>
+			<option value="8">August</option>
+			<option value="9">September</option>
+			<option value="10">October</option>
+			<option value="11">November</option>
+			<option value="12">December</option>
+			</select>
+
+			<label for="expirationDate_year"></label>
+			<select id="expirationDate_year" placeholder="Year" name="Year">
+			<option value="0">Year</option>
+			<option value="1">2026</option>
+			<option value="2">2025</option>
+			<option value="3">2024</option>
+			<option value="4">2023</option>
+			<option value="5">2022</option>
+			<option value="6">2021</option>
+			<option value="7">2020</option>
+			<option value="8">2019</option>
+			<option value="9">2018</option>
+			<option value="10">2017</option>
+			<option value="11">2016</option>
+			<option value="12">2015</option>
+			</select>
+		</fieldset>
+
+	<!--submitbutton-->
+		<div class="button">
+        	<button type="submit">Create your portfolio</button>
+    	</div>
+
+	</form>
+</main>	
 
 </body>
 </html>

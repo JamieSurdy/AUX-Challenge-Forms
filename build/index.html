@@ -22,80 +22,99 @@
 				<p>50 projects, 500 images, 10 videos, domain binding, and technical support.</p>
 		</header>
 
+	
+	<ol> <!--fieldsets_in_orderedlist-->
 	<!--nameportfolio-->
-		<fieldset> 
-			<aside>1</aside>
-			<legend>First, name your portfolio</legend>
+		<li>
+			<fieldset> 
+				<legend>First, name your portfolio</legend>
 
-			<label for="portfolio_name">Portfolio name</label><br>
-			<input id="portfolio_name" type="text" name="textfield"><br>
+				<label for="portfolio_name">Portfolio name</label><br>
+				<input id="portfolio_name" type="text" name="textfield"><br>
 
-			<label for="portfolio_address">Portfolio address</label><br>
-			<input id="portfolio_address" type="url" name="portfolio" placeholder=".sample.com">
-		</fieldset>
+				<label for="portfolio_address">Portfolio address</label><br>
+				<input id="portfolio_address" type="text" name="portfolio">
+
+				<label>.sample.com</label>
+				
+			</fieldset>
+		</li>
 
 	<!--acountdetails-->
-		<fieldset>
-			<aside>2</aside>
-			<legend>Now, enter your account details</legend>
+		<li>
+			<fieldset>
+				<legend>Now, enter your account details</legend>
 
-			<label for="account_name">Name</label><br>
-			<input id="account_name" type="text" name="textfield"><br>
+				<label for="account_name">Name</label><br>
+				<input id="account_name" type="text" name="textfield"><br>
 
-			<label for="account_email">Email</label><br>
-			<input id="account_email" type="email" name="email"><br>
-			<p>NOTE: We'll never share your email, promise.</p>
+				<label for="account_email">Email</label><br>
+				<input id="account_email" type="email" name="email"><br>
+				<p>NOTE: We'll never share your email, promise.</p>
 
-			<label for="account_password">Password</label><br>
-			<input id="account_password" type="text" name="textfield">
-		</fieldset>
+				<label for="account_password">Password</label><br>
+				<input id="account_password" type="text" name="textfield">
+			</fieldset>
+		</li>
 
 	<!--paymentinfo-->
-		<fieldset>
-			<aside>3</aside>
-			<legend>Finally, enter your payment information</legend>
+		<li>
+			<fieldset>
+				<legend>Finally, enter your payment information</legend>
 
-			<label for="card_number">Card Number:</label><br>
-			<input id="card_number" type="text" name="textfield" maxlength="16"><br>
+				<label for="card_number">Credit Card Number</label><br>
+				<input id="card_number" type="text" name="textfield" maxlength="16">
 
-			<label for="security_code">Security Code:</label><br>
-			<input id="security_code" type="text" name="textfield" maxlength="4"><br>
+				<!--credit_card_radio_buttons-->
+				<input id="amex" type="radio" name="cardtype" value="amex">
+				<label for="amex">American Express</label>
+				<input id="visa" type="radio" name="cardtype" value="visa">
+				<label for="visa">Visa</label>
+				<input id="discover" type="radio" name="cardtype" value="discover">
+				<label for="discover">Discover</label>
+				<input id="mastercard" type="radio" name="cardtype" value="mastercard">
+				<label for="mastercard">Mastercard</label><br>
 
-			<!--expiration_month_year-->
-			<label for="expirationDate_month">Expiration date</label><br>
-			<select id="expirationDate_month" placeholder="Month" name="Month">
-			<option value="0">Month</option>
-			<option value="1">January</option>
-			<option value="2">February</option>
-			<option value="3">March</option>
-			<option value="4">April</option>
-			<option value="5">May</option>
-			<option value="6">June</option>
-			<option value="7">July</option>
-			<option value="8">August</option>
-			<option value="9">September</option>
-			<option value="10">October</option>
-			<option value="11">November</option>
-			<option value="12">December</option>
-			</select>
+				<label for="security_code">Security Code</label><br>
+				<input id="security_code" type="text" name="textfield" maxlength="4"><br>
 
-			<label for="expirationDate_year"></label>
-			<select id="expirationDate_year" placeholder="Year" name="Year">
-			<option value="0">Year</option>
-			<option value="1">2026</option>
-			<option value="2">2025</option>
-			<option value="3">2024</option>
-			<option value="4">2023</option>
-			<option value="5">2022</option>
-			<option value="6">2021</option>
-			<option value="7">2020</option>
-			<option value="8">2019</option>
-			<option value="9">2018</option>
-			<option value="10">2017</option>
-			<option value="11">2016</option>
-			<option value="12">2015</option>
-			</select>
-		</fieldset>
+				<!--expiration_month_year-->
+				<label for="expirationDate_month">Expiration Date</label><br>
+				<select id="expirationDate_month" name="Month">
+				<option value="0">Month</option>
+				<option value="1">January</option>
+				<option value="2">February</option>
+				<option value="3">March</option>
+				<option value="4">April</option>
+				<option value="5">May</option>
+				<option value="6">June</option>
+				<option value="7">July</option>
+				<option value="8">August</option>
+				<option value="9">September</option>
+				<option value="10">October</option>
+				<option value="11">November</option>
+				<option value="12">December</option>
+				</select>
+
+				<label for="expirationDate_year"></label>
+				<select id="expirationDate_year" name="Year">
+				<option value="0">Year</option>
+				<option value="1">2026</option>
+				<option value="2">2025</option>
+				<option value="3">2024</option>
+				<option value="4">2023</option>
+				<option value="5">2022</option>
+				<option value="6">2021</option>
+				<option value="7">2020</option>
+				<option value="8">2019</option>
+				<option value="9">2018</option>
+				<option value="10">2017</option>
+				<option value="11">2016</option>
+				<option value="12">2015</option>
+				</select>
+			</fieldset>
+		</li>
+	</ol>
 
 	<!--submitbutton-->
 		<div class="button">

@@ -1,1 +1,119 @@
 /* Your CSS goes here */
+
+body{
+	background-color: rgb(179,227,255);
+	width: 700px;
+	height: 1213px;
+}
+
+form{
+	background-color: rgb(255,255,255);
+	border-radius: 10px;
+	width: 599px;
+	height: 1183px;
+	margin: 0 auto;
+
+}
+
+header{
+	background-color: rgb(19,101,127);
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+
+}
+
+header h1{
+	font-family: 'Merriweather',serif;
+	color: rgb(255,255,255);
+	padding-top:22px;
+	padding-left: 35px;
+}
+
+header p{
+	font-family: 'Open Sans',sans-serif;
+	font-style: bold;
+	font-size:10pt;
+	color: rgb(172,227,255);
+	padding-left: 35px;
+	padding-bottom:20px;
+
+}
+
+fieldset{
+	background-color: rgb(243,245,245);
+	font-family: 'Open Sans',sans-serif;
+	font-size:8pt;
+	border: none;
+	border-radius: 8px;
+	margin-left:3%;
+	width: 93%;
+	position:relative;
+}
+
+fieldset legend{
+	font-family: 'Merriweather',serif;
+	color: rgb(10,94,120);
+	font-size:14pt;
+}
+
+fieldset.creditcardlist legend{
+	display:none; 
+}
+
+fieldset.creditcardlist ul{
+	list-style-type:none; 
+	position:absolute;
+	margin-left:80px;
+	bottom:3px;
+}
+
+fieldset.creditcardlist li{
+	display:inline;
+}
+
+input#portfolio_name, input#account_name, input#account_email, input#account_password{
+	width:80%;
+}
+
+input#portfolio_address{
+	width:68%;
+}
+
+input#security_code{
+	width:22%;
+}
+
+label.sampletext{
+	background-color:rgb (250,250,250);
+	color: rgb(164,164,164);
+	border: 0.5px solid rgb(198,198,198);
+	padding:2px;
+	margin-left:-5px;
+}
+
+span.number{
+	font-family: 'Merriweather',serif;
+	color: rgb(255,255,255);
+	font-size:12pt;
+	font-style: normal;
+	text-align: center;
+	background-color: rgb(82,163,212);
+	width:100px;
+	height:100px;
+	border-radius: 50%;
+	border: 3px solid white;
+	margin-right:8px;
+	margin-left:-40px;
+	padding-left:8px;
+	padding-right:8px;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+
+.createportfoliobutton{
+	color: rgb(255,255,255);
+	background-color: rgb(137,164,48);
+	border-radius: 5px;
+	padding:5px;
+	margin: 0 auto;
+}

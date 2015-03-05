@@ -1,34 +1,40 @@
 /* Your CSS goes here */
-
+/*------------------------lightblue---------------*/
 body{
 	background-color: rgb(179,227,255);
 	width: 700px;
 	height: 1213px;
 }
+/*------------------------end_lightblue---------------*/
 
+/*-------------------------whiteform-----------------*/
 form{
 	background-color: rgb(255,255,255);
 	border-radius: 10px;
 	width: 599px;
-	height: 1183px;
 	margin: 0 auto;
-
+	padding-bottom:3%;
 }
+/*-------------------------end_whiteform-----------------*/
 
+/*-------------------dark_blue_header-------------------*/
 header{
 	background-color: rgb(19,101,127);
 	border-top-right-radius: 10px;
 	border-top-left-radius: 10px;
-
 }
+/*-------------------end_dark_blue_header-------------------*/
 
+/*----------------------sign_up_for_whoo---------------------*/
 header h1{
 	font-family: 'Merriweather',serif;
 	color: rgb(255,255,255);
 	padding-top:22px;
 	padding-left: 35px;
 }
+/*--------------------end_sign_up_for_whoo---------------------*/
 
+/*-----------------------------50 projects...------------------*/
 header p{
 	font-family: 'Open Sans',sans-serif;
 	font-style: bold;
@@ -36,62 +42,52 @@ header p{
 	color: rgb(172,227,255);
 	padding-left: 35px;
 	padding-bottom:20px;
-
 }
+/*-----------------------------end_50_projects...------------------*/
 
+/*------------------------fieldset_legend_number---------------*/
 fieldset{
+	border:none;
+}
+/*------------------------fend_ieldset_legend_number---------------*/
+
+/*-------------------------end_fieldset_titles-------------------*/
+fieldset legend{
+	font-family: 'Merriweather',serif;
+	color: rgb(10,94,120);
+	font-size:14pt;
+	margin-left:2%;
+}
+/*-------------------------end_fieldset_titles-------------------*/
+
+/*----------------fieldset-gray_box_and_all_its_contents--------*/
+.fieldsetcontainer{
 	background-color: rgb(243,245,245);
 	font-family: 'Open Sans',sans-serif;
 	font-size:8pt;
 	border: none;
 	border-radius: 8px;
-	margin-left:3%;
-	width: 93%;
-	position:relative;
+	width: 85%;
+	padding-left:60px;
+	padding-top:30px;
+	padding-bottom:30px;
+	margin: 0 auto;
 }
+/*----------------fieldset-gray_box_and_all_its_contents--------*/
 
-fieldset legend{
-	font-family: 'Merriweather',serif;
-	color: rgb(10,94,120);
-	font-size:14pt;
-}
-
-fieldset.creditcardlist legend{
-	display:none; 
-}
-
-fieldset.creditcardlist ul{
-	list-style-type:none; 
-	position:absolute;
-	margin-left:80px;
-	bottom:3px;
-}
-
-fieldset.creditcardlist li{
-	display:inline;
-}
-
-input#portfolio_name, input#account_name, input#account_email, input#account_password{
-	width:80%;
-}
-
-input#portfolio_address{
-	width:68%;
-}
-
-input#security_code{
-	width:22%;
-}
-
-label.sampletext{
+/*---------------------portfolio_address_sample_text-----------*/
+.sampletext{
 	background-color:rgb (250,250,250);
-	color: rgb(164,164,164);
-	border: 0.5px solid rgb(198,198,198);
-	padding:2px;
-	margin-left:-5px;
+	color: 	rgb(164,164,164);
+	border: 0.75px solid rgb(198,198,198);
+	padding-bottom:2px;
+	padding-top:2px;
+	margin-left:-3px;
 }
+/*---------------------end_portfolio_address_sample_text-----------*/
 
-span.number{
+/*---------------------------circle_numbers-------------------------*/
+.number{
 	font-family: 'Merriweather',serif;
 	color: rgb(255,255,255);
 	font-size:12pt;
@@ -109,11 +105,149 @@ span.number{
 	padding-top:5px;
 	padding-bottom:5px;
 }
+/*------------------------end_circle_numbers---------------------------*/
+
+/*--------------------------creditcard_fieldset-------------------------*/
+.creditcardlist legend{
+	display:none; 
+}
+
+/*---------------------creditcard_labels_inputs---------------------*/
+ul{
+	list-style-type:none; 
+	margin-left:90px;
+	margin-top:-40px;
+}
+
+.creditcards li{
+	display:inline-block;
+	width:45px;
+	height:30px;
+}
+
+ul.creditcards li label {
+	text-indent:-9999px;
+	overflow:hidden;
+	display: inline-block;
+	width:45px;
+	height:30px;
+}
+
+
+/*---------------------end_creditcard_labels_inputs---------------------*/
+
+/*-------------------creditcard_sprites_unchecked---------------------*/
+.sprite_amex label{
+	background: url('../images/sprite.png') no-repeat -1px -40px; 
+	width: 44px; 
+	height: 32px;
+}
+
+.sprite_visa label{
+	background: url('../images/sprite.png') no-repeat -48px -40px; 
+	width: 45px; 
+	height: 32px;
+}
+
+.sprite_discover label{
+	background: url('../images/sprite.png') no-repeat -96px -40px; 
+	width: 45px; 
+	height: 32px;
+}
+
+.sprite_mc label{
+	background: url('../images/sprite.png') no-repeat -144px -40px; 
+	width: 45px; 
+	height: 32px;
+}
+/*-------------------end_creditcard_sprites_unchecked---------------------*/
+
+/*------------------------creditcard_sprites_checked-------------------*/
+
+.sprite_amex input[type="radio"]:checked + label{
+	background: url('../images/sprite.png') no-repeat 0 0; 
+	width: 45px; 
+	height: 30px; 
+}
+
+.sprite_visa input[type="radio"]:checked + label{ 
+	background: url('../images/sprite.png') no-repeat -48px 0; 
+	width: 45px; 
+	height: 30px;
+}
+
+.sprite_discover input[type="radio"]:checked + label{ 
+	background: url('../images/sprite.png') no-repeat -96px 0; 
+	width: 45px; 
+	height: 30px;
+}
+
+.sprite_mc input[type="radio"]:checked + label{ 
+	background: url('../images/sprite.png') no-repeat -144px 0; 
+	width: 45px; 
+	height: 30px;
+}
+/*------------------------end_creditcard_sprites_checked-------------------*/
+
+/*--------------input_fields----------------------*/
+input#portfolio_name, input#account_name, input#account_email, input#account_password{
+	width:80%;
+}
+
+input#portfolio_address{
+	width:68%;
+}
+
+
+/*--------------end_input_fields----------------------*/
+
+/*--------------remove_cc_radio_buttons_for_sprites----------------------*/
+
+.creditcards input[type='radio']{
+	display:none;
+}
+
+/*--------------end_remove_cc_radio_buttons_for_sprites----------------------*/
+
+/*------------------------securitycodesprites--------------------------
+
+.sprite_amex input[type="radio"]:checked + label.security_code{
+	background: url('../images/sprite.png') no-repeat 0 -81px; 
+	width: 70px; 
+	height: 33px; 
+}
+
+.sprite_visa input[type="radio"]:checked + label.security_code{
+	background: url('../images/sprite.png') no-repeat 0 -124px; 
+	width: 62px; 
+	height: 32px;
+}
+
+.sprite_discover input[type="radio"]:checked + label.security_code{
+	background: url('../images/sprite.png') no-repeat 0 -124px; 
+	width: 62px; 
+	height: 32px;
+}
+
+.sprite_mc input[type="radio"]:checked + label.security_code{
+	background: url('../images/sprite.png') no-repeat 0 -124px; 
+	width: 62px; 
+	height: 32px;
+}
+
+-----------------------end_securitycodesprites--------------------------*/
+
+
+/*--------submitbutton------------*/
+.button{
+	margin-left: 35%;
+}
 
 .createportfoliobutton{
 	color: rgb(255,255,255);
 	background-color: rgb(137,164,48);
 	border-radius: 5px;
 	padding:5px;
-	margin: 0 auto;
+	font-size:10pt;
 }
+/*--------end_submitbutton------------*/

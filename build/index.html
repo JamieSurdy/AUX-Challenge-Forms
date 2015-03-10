@@ -33,6 +33,7 @@
 					<p>
 						<label for="portfolio_name">Portfolio name</label><br>
 						<input id="portfolio_name" type="text" name="name" required>
+						<label class="name_sprite_valid"></label>
 					</p>
 
 					<p>
@@ -49,12 +50,13 @@
 				<div class="fieldsetcontainer">
 					<p>
 						<label for="account_name">Name</label><br>
-						<input id="account_name" type="text" name="name" required><br>
+						<input id="account_name" type="text" name="name" required>
 					</p>
 
 					<p>
 						<label for="account_email">Email</label><br>
-						<input id="account_email" type="email" name="email" required><br>
+						<input id="account_email" type="email" name="email" required>
+						<label class="email_sprite_valid"></label>
 						<p class="note">NOTE: We'll never share your email, promise.</p>
 					</p>
 
@@ -93,11 +95,21 @@
 					</fieldset>
 
 					<div class="security">
-					
 							<label for="security_code">Security Code</label><br>
 							<input id="security_code" type="text" name="code" maxlength="4" required>
-						
 					</div>
+
+	<!--radiobuttons_for_securitycc-->
+					<fieldset class="securitycardslist">
+						<legend>Security CVC Code</legend>
+							<ul class="securitycards">
+								<li class="sprite_amex_secure"><input id="securecode_1" type="radio" name="secure" value="amex" >
+									<label for="securecode_1">American Express Security Code</label></li>
+								
+								<li class="sprite_allothers_secure"><input id="securecode_2" type="radio" name="secure" value="others">
+									<label for="securecode_2">Visa, Mastercard, Discover Security Code</label></li>	
+							<ul>
+					</fieldset>
 
 
 	<!--expiration_month_year-->
@@ -143,6 +155,13 @@
     	</div>
 
 	</form>
+
+
+<script src="assets/js/vendor/jquery.min.js"></script>
+<script src="assets/js/vendor/jquery.validate.min.js"></script>
+<script src="assets/js/vendor/modernizer.min.js"></script>
+<script type="text/javascript" src="assets/js/script.js"></script>   
+
 
 </body>
 </html>

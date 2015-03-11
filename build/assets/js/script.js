@@ -1,44 +1,48 @@
 /* Your JavaScript goes here */
 
+	(function work(){
 
-// //ccDefinitions = {
-// 	'.sprite_visa': /^4/,
-// 	'.sprite_mc': /^5[1-5]/,
-// 	'.sprite_amex': /^3(4|7)/,
-// 	'.sprite_disc': /^6011/
-// };
+		var amex=$('#cardtype_1');
+		var visa=$('#cardtype_2');
+		var mc=$('#cardtype_4');
+		var discover=$('#cardtype_3')
+
+		//if selected, this value shows up
+		$.fn.checked = function(value){
+
+			if (value===true || value===false){
+				$(this).each(function(){this.checked=value; });
+			}
+		}
+	});
 
 
-// getCreditCardType: function (number) {
+	function getCardNumber(){
+		$('#card_number').keyup(function(){
+			var card = $(this).val();
+			var cardNumber =(card).slice(0,1);
 
-// 	var ccType;
+			console.log(cardNumber);
 
-// 	$.each(ccDefinitions, function (i, v) {
+			if (cardNumber === '37'){
+				(amex).checked(true);
+			} else if (cardNumber === '4'){
+				(visa).checked(true);
+			} else if (cardNumber === '5'){
+				(mc).checked(true);
+			} else if (cardNumber === '6'){
+				(discover).checked(true);
+			}
 
-// 		if (v.test(number)) {
-// 			ccType = i;
-// 			return false;
-// 		}
+		});
+};
 
-// 	});
+	getCardNumber();
+	
+});
 
-// 	return ccType;
+work();
 
-// },//
 
-// if (condition)
-// 	statement1
-// [else
-// 	statement2]
 
-if $("#card_number").val("37"){
-	statement1
 
-} else if $("#card_number").val("4"){
-	statement2
-
-} else if $("#card_number").val("5")
-	statement3
-
-} else $("#card_number").val("6"){
-	statement4}

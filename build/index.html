@@ -3,16 +3,17 @@
 <head>
   <title>Forms Challenge</title>
   
-  <link rel="dns-prefetch" href="//ajax.googleapis.com">
+    <!--fonts-->
   <link rel="dns-prefetch" href="//fonts.googleapis.com">
-  <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300|Merriweather:400,300,700' rel='stylesheet' type='text/css'>
+
   
   <meta charset="UTF-8">
   <meta http-equiv="cleartype" content="on">
 
-<!--fonts-->
-  <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,400italic,300italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+
+  <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 
 </head>
 
@@ -31,13 +32,13 @@
 				<legend><span class="number">1</span>First, name your portfolio</legend>
 				<div class="fieldsetcontainer">
 					<p>
-						<label for="portfolio_name">Portfolio name</label><br>
+						<label for="portfolio_name">Portfolio name</label>
 						<input id="portfolio_name" type="text" name="name" required>
 						<label class="name_sprite_valid"></label>
 					</p>
 
 					<p>
-						<label for="portfolio_address">Portfolio address</label><br>
+						<label for="portfolio_address">Portfolio address</label>
 						<input id="portfolio_address" type="text" name="address" required>
 						<label class="sampletext">.sample.com</label>
 					</p>
@@ -49,19 +50,19 @@
 				<legend><span class="number">2</span>Now, enter your account details</legend>
 				<div class="fieldsetcontainer">
 					<p>
-						<label for="account_name">Name</label><br>
+						<label for="account_name">Name</label>
 						<input id="account_name" type="text" name="name" required>
 					</p>
 
 					<p>
-						<label for="account_email">Email</label><br>
+						<label for="account_email">Email</label>
 						<input id="account_email" type="email" name="email" required>
 						<label class="email_sprite_valid"></label>
-						<p class="note">NOTE: We'll never share your email, promise.</p>
+						<label class="note">NOTE: We'll never share your email, promise.</label>
 					</p>
 
 					<p>
-						<label for="account_password">Password</label><br>
+						<label for="account_password">Password</label>
 						<input id="account_password" type="password" name="password" required>
 					</p>
 				</div>
@@ -72,7 +73,7 @@
 				<legend><span class="number">3</span>Finally, enter your payment information</legend>
 				<div class="fieldsetcontainer">
 					<p>
-						<label for="card_number">Credit Card Number</label><br>
+						<label for="card_number">Credit Card Number</label>
 						<input id="card_number" type="text" name="cardnumber" maxlength="16" required>
 					</p>
 
@@ -91,11 +92,11 @@
 
 								<li class="sprite_mc"><input id="cardtype_4" type="radio" name="cardtype" value="mastercard">
 									<label for="cardtype_4">Mastercard</label><br></li>
-							<ul>
+							</ul>
 					</fieldset>
 
 					<div class="security">
-							<label for="security_code">Security Code</label><br>
+							<label for="security_code">Security Code</label>
 							<input id="security_code" type="text" name="code" maxlength="4" required>
 					</div>
 
@@ -108,12 +109,15 @@
 								
 								<li class="sprite_allothers_secure"><input id="securecode_2" type="radio" name="secure" value="others">
 									<label for="securecode_2">Visa, Mastercard, Discover Security Code</label></li>	
-							<ul>
+							</ul>
 					</fieldset>
 
 
 	<!--expiration_month_year-->
-					<label for="expirationDate_month">Expiration Date</label><br>
+
+				<label for="expirationDate">Expiration Date</label>
+
+					<label for="expirationDate_month"></label>
 					<select id="expirationDate_month" name="Month">
 						<option value="0">Month</option>
 						<option value="1">January</option>
@@ -130,6 +134,8 @@
 						<option value="12">December</option>
 					</select>
 
+
+		
 						<label for="expirationDate_year"></label>
 						<select id="expirationDate_year" name="Year">
 							<option value="0">Year</option>
@@ -146,6 +152,9 @@
 							<option value="11">2016</option>
 							<option value="12">2015</option>
 						</select>
+
+
+				
 				</div>	
 			</fieldset>
 

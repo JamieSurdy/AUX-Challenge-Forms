@@ -27,6 +27,7 @@ header{
 	background-color: rgb(19,101,127);
 	border-top-right-radius: 10px;
 	border-top-left-radius: 10px;
+	background-image: linear-gradient(#167793, #125e77);
 }
 /*-------------------end_dark_blue_header-------------------*/
 
@@ -56,14 +57,34 @@ fieldset{
 }
 /*------------------------end_fieldset_legend_number---------------*/
 
+
+
 /*-------------------------fieldset_titles-------------------*/
-fieldset legend{
+legend{
 	font-family: 'Merriweather',serif;
 	color: rgb(10,94,120);
 	font-size:14pt;
-	margin-left:2%;
+	margin-left:40px;
 }
 /*-------------------------end_fieldset_titles-------------------*/
+
+label, p{
+	color: #6F7070;
+	font-family: 'Open Sans',sans-serif;
+	font-size: 8pt;
+	line-height: inherit;
+	display:block;
+}
+
+.securityLabelText{
+	margin-bottom:-22px;
+}
+
+ul{
+	list-style-type:none; 
+	margin-left:90px;
+	margin-top:-40px;
+}
 
 /*----------------fieldset-gray_box_and_all_its_contents--------*/
 .fieldsetcontainer{
@@ -72,25 +93,25 @@ fieldset legend{
 	font-size:8pt;
 	border: none;
 	border-radius: 8px;
-	width: 85%;
-	padding-left:60px;
+	width: 80%;
+	height: auto;
 	padding-top:30px;
 	padding-bottom:30px;
-	margin: 0 auto;
+	margin: 0px 0px 0px 20px;
+	display:inline-block;
+
 }
 /*----------------fieldset-gray_box_and_all_its_contents--------*/
 
-/*---------------------invalid_sprites_pink-----------*/
+/*---------------------validate_sprites-----------*/
 input:invalid:focus + .name_sprite_valid{
 	position:absolute;
 	background: url('../images/sprite.png') no-repeat -1px -167px; 
 	width: 19px; 
 	height: 19px;
 	position: absolute;
-	margin-left:365px;
-	margin-top:-25px;
-
-
+	margin-left:385px;
+	margin-top:-26px;
 }
 
 input:invalid:focus + .email_sprite_valid{
@@ -98,21 +119,17 @@ input:invalid:focus + .email_sprite_valid{
 	width: 19px; 
 	height: 19px;
 	position: absolute;
-	margin-left:365px;
+	margin-left:385px;
 	margin-top:-26px;
-	
 }
 
-/*---------------------end_invalid_sprites_pink-----------*/
-
-/*---------------------valid_sprites_green-----------*/
 input:valid:focus + .name_sprite_valid {
 	background: url('../images/sprite.png') no-repeat -30px -167px; 
 	width: 19px; 
 	height: 19px;
 	position: absolute;
-	margin-left:365px;
-	margin-top:-25px;
+	margin-left:385px;
+	margin-top:-26px;
 }
 
 input:valid:focus + .email_sprite_valid {
@@ -120,17 +137,14 @@ input:valid:focus + .email_sprite_valid {
 	width: 19px; 
 	height: 19px;
 	position: absolute;
-	margin-left:365px;
-	margin-top:-25px;
+	margin-left:385px;
+	margin-top:-26px;
 }
 
 
-/*---------------------end_invalid_sprites_green-----------*/
+/*---------------------end_valid_sprites-----------*/
 
 
-label{
-	display: block;
-}
 
 
 /*---------------------portfolio_address_sample_text-----------*/
@@ -138,11 +152,10 @@ label{
 	position: absolute;
 	text-align: center;
 	width: 150px;
-	height: 19px;
-	top: 278px;
-	left: 329px;
+	height: 20px;
+	top: 260px;
+	left: 338px;
 	padding-top:6px;
-	/* background-image: linear-gradient(90deg, #ebebeb, #fafafa); */
 	border-top-right-radius: 3px;
 	border-bottom-right-radius: 3px;
 	color: #888888;
@@ -155,10 +168,12 @@ label{
 /*--------------input_fields----------------------*/
 input{
 	border:none;
+	margin-bottom:5px;
+	cursor:pointer;
 }
 
 input#portfolio_name, input#account_name, input#account_email, input#account_password, input#portfolio_address{
-	width:80%;
+	width:90%;
   	background: #fff;
   	border-radius: 5px;
   	height:25px;
@@ -166,7 +181,17 @@ input#portfolio_name, input#account_name, input#account_email, input#account_pas
   	border:none;
 }	
 
-input#card_number, input#security_code{
+input#card_number{
+	background: #fff;
+  	border-radius: 5px;
+  	height:25px;
+  	width:40%;
+    border:none;
+  	box-shadow: inset 0px 1.5px 0px 0px #cbcbcb;
+
+}
+
+input#security_code{
   	background: #fff;
   	border-radius: 5px;
   	height:25px;
@@ -179,168 +204,129 @@ input#card_number, input#security_code{
 /*--------------password_note---------------------*/
 .note{
 	display: inline-block;
+	margin-bottom:7px;
 }
 /*--------------end_password_note----------------------*/
 
 /*---------------------------circle_numbers-------------------------*/
 .number{
 	font-family: 'Merriweather',serif;
-	color: rgb(255,255,255);
-	font-size:12pt;
-	font-style: normal;
-	text-align: center;
-	background-color: rgb(82,163,212);
-	width:100px;
-	height:100px;
-	border-radius: 50%;
-	border: 3px solid white;
-	margin-right:8px;
-	margin-left:-40px;
-	padding-left:8px;
-	padding-right:8px;
-	padding-top:5px;
-	padding-bottom:5px;
+color: rgb(255,255,255);
+font-size:12pt;
+font-style: normal;
+text-align: center;
+background-color: rgb(82,163,212);
+width:100px;
+height:100px;
+border-radius: 50%;
+border: 3px solid white;
+margin-right:20px;
+margin-left:-70px;
+padding-left:8px;
+padding-right:8px;
+padding-top:5px;
+padding-bottom:5px;
 }
 /*------------------------end_circle_numbers---------------------------*/
 
-
-/*---------------------creditcard_labels_inputs---------------------*/
-ul{
-	list-style-type:none; 
-	margin-left:90px;
-	margin-top:-40px;
-}
-
-.creditcards li{
-	display:inline-block;
-	width:45px;
-	height:30px;
-}
-
-ul.creditcards li label {
-	text-indent:-9999px;
-	overflow:hidden;
-	display: inline-block;
-	width:45px;
-	height:30px;
-}
-/*---------------------end_creditcard_labels_inputs---------------------*/
-
-/*-------------------hides_creditcard_fieldset_label_and_cc_radio_buttons_for_sprites-------------------------*/
-.creditcardlist legend{
-	display:none; 
-}
-
-.creditcards input[type='radio']{
-	box-shadow:inset 1px 0px 0px -3px #cbcbcb;
-  	background: #fff;
-  	position: absolute;
-  	left:-9999px;
-}
-
-/*-------------------end_hides_creditcard_fieldset_label_and_cc_radio_buttons_for_sprites-------------------------*/
-
-/*-------------------creditcard_sprites_unchecked---------------------*/
-.sprite_amex label{
-	background: url('../images/sprite.png') no-repeat 0 0; 
-	width: 45px; 
-	height: 30px; 
-	cursor:pointer;
-	
-}
-
-.sprite_visa label{
-	background: url('../images/sprite.png') no-repeat -48px 0; 
-	width: 45px; 
-	height: 30px;
-	cursor:pointer;
-}
-
-.sprite_discover label{
-	background: url('../images/sprite.png') no-repeat -96px 0; 
-	width: 45px; 
-	height: 30px;
-	cursor:pointer;
-}
-
-.sprite_mc label{
-	background: url('../images/sprite.png') no-repeat -144px 0; 
-	width: 45px; 
-	height: 30px;
-	cursor:pointer;
-}
-/*-------------------end_creditcard_sprites_unchecked---------------------*/
-
-/*------------------------creditcard_sprites_checked-------------------*/
-
-.sprite_amex input[type="radio"]:checked + label{
-	background: url('../images/sprite.png') no-repeat -1px -40px; 
-	width: 44px; 
-	height: 32px;
-	cursor:pointer;
-}
-
-.sprite_visa input[type="radio"]:checked + label{ 
-	background: url('../images/sprite.png') no-repeat -48px -40px; 
-	width: 45px; 
-	height: 32px;
-	cursor:pointer;
-}
-
-.sprite_discover input[type="radio"]:checked + label{ 
-	background: url('../images/sprite.png') no-repeat -96px -40px; 
-	width: 45px; 
-	height: 32px;
-	cursor:pointer;
-
-}
-
-.sprite_mc input[type="radio"]:checked + label{
-	background: url('../images/sprite.png') no-repeat -144px -40px; 
-	width: 45px; 
-	height: 32px;
-	cursor:pointer; 
-}
-/*------------------------end_creditcard_sprites_checked-------------------*/
-
-
-/*--------------security_radio_buttons_for_security_code_sprites----------------------*/
-
-.securitycardslist legend{
-	display:none; 
-}
-
-ul{
-	list-style-type:none; 
-	margin-left:90px;
-	margin-top:-46px;
-
-}
-
-.securitycards li{
-	display:inline-block;
-	width:80px;
-	height:35px;
-}
-
-ul.securitycards{
+.creditcards{
+	margin-left:200px;
 	margin-top:-35px;
 }
-
-ul.securitycards li label {
-	text-indent:-9999px;
-	overflow:hidden;
-	display: inline-block;
-	width:80px;
-	height:35px;
+.creditcards li{
+	width:45px;
+	height:30px;
+	display:inline;
 }
 
-.securitycards input[type='radio']{
-	display:none;
+input[type="radio"] {
+	position: absolute;
+	left: -9999px;
+}
+
+.creditcards label, label.csv{
+	display:inline-block;
+	width:45px;
+	height: 30px;
+	text-indent: -9999px;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+label.amex, label.visa, label.discover, label.mc{
+	display: inline;
+}
+
+label.csv{
+	width: 70px;
+	height: 32px;
+	margin-left: 2%;
+	margin-top: 6px;
+}
+
+label.csv{
+	background: url('../images/sprite.png') no-repeat 0 -124px;
+
+}
+
+label.csv.amexpress {
+	background: url('../images/sprite.png') no-repeat 0 -81px;
 }
 
 
-/*--------------end_security_radio_buttons_for_security_code_sprites----------------------*/
+input#amex + label{
+	background: url('../images/sprite.png') no-repeat -1px -40px; 
+	width: 45px; 
+	height: 30px; 
+}
+
+input#amex:checked +label{
+	background: url('../images/sprite.png') no-repeat 0 0; 
+	width: 44px; 
+	height: 32px;
+}	
+
+input#visa + label{
+	background: url('../images/sprite.png') no-repeat -48px -40px;
+	width: 45px; 
+	height: 30px;
+}
+
+input#visa:checked + label{ 
+	background: url('../images/sprite.png') no-repeat -48px 0; 
+	width: 45px; 
+	height: 32px;
+}
+
+input#discover + label{
+	background: url('../images/sprite.png') no-repeat -96px -40px; 
+	width: 45px; 
+	height: 30px;
+}
+
+input#discover:checked + label{ 
+	background: url('../images/sprite.png') no-repeat -96px 0; 
+	width: 45px; 
+	height: 32px;
+}
+
+input#mc + label{
+	background: url('../images/sprite.png') no-repeat -144px -40px; 	
+	width: 45px; 
+	height: 30px;
+	cursor:pointer;
+}
+
+input#mc:checked + label{
+	background: url('../images/sprite.png') no-repeat -144px 0; 
+	width: 45px; 
+	height: 32px; 
+}
+
+
+li.expiration{
+	display; inline;
+}
 
 #expirationDate_month, #expirationDate_year{
 	float:left;
@@ -352,7 +338,7 @@ ul.securitycards li label {
 
 /*------------------------securitycodesprites--------------------------*/
 
-.sprite_amex_secure label{
+/*.sprite_amex_secure label{
 	background: url('../images/sprite.png') no-repeat 0 -81px; 
 	width: 70px; 
 	height: 33px;
@@ -362,9 +348,13 @@ ul.securitycards li label {
 	background: url('../images/sprite.png') no-repeat 0 -124px; 
 	width: 62px; 
 	height: 32px;
-}
+}*/
 
 /*-----------------------end_securitycodesprites--------------------------*/
+
+
+
+
 
 
 /*--------submitbutton------------*/

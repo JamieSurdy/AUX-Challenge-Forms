@@ -1,77 +1,68 @@
 /* Your JavaScript goes here */
 
-	$(function work(){
 
-		var amex=$('#cardtype_1');
-		var visa=$('#cardtype_2');
-		var mc=$('#cardtype_4');
-		var discover=$('#cardtype_3')
-		var secCode = $('#security_code')
+(function(){
 
-		//if selected, this value shows up
-		$.fn.checked = function(value){
+	var amex=$('input#amex');
+	var visa=$('input#visa');
+	var discover=$('input#discover')
+	var mc=$('input#mc');
+	var csv = $('.csv');
 
-			if (value===true || value===false){
-				$(this).each(function(){this.checked=value; });
-			}
+	//if selected, this value shows up
+	$.fn.checked = function(value){
+		if (value===true || value===false){
+			$(this).each(function(){this.checked=value; });
 		}
 	};
+
 	
-		function getCardNumber(){
-			$('cardNumber').keyup(function(){
-				var card = $(this).val();
-				var cardNumber = (card).slice(0,1);
+	function getCardNumber(){
+		$('#card_number').keyup(function(){
+            var card=$(this).val();
+            var card_number = (card).slice(0,1);
 
-				console.log(cardNumber);
+			console.log(card_number);
 
-			if (cardNumber === '37'){
+			if (card_number === '3'){
 				(amex).checked(true);
-			} else if (cardNumber === '4'){
+                (csv).addClass('amexpress');
+			} else if (card_number === '4'){
 				(visa).checked(true);
-			} else if (cardNumber === '5'){
+                (csv).removeClass('amexpress');
+			} else if (card_number=== '5'){
 				(mc).checked(true);
-			} else if (cardNumber === '6'){
+                (csv).removeClass('amexpress')
+			} else if (card_number=== '6'){
 				(discover).checked(true);
+                (csv).removeClass('amexpress');
 			}
-
-
 		});
-
 	};
-
-	(amex).change(function()){
-		if ($(this).prop('checked')){
-			secCode.addClass('amex');
-		} else{
-			secCode.removeClass('amex')
-		}
-	});
 
 
 	getCardNumber();
+
+    (amex).change(function(){
+        if ($(this).prop('checked')){
+            csv.addClass("amexpress"); 
+        } else{
+            csv.removeClass('amexpress')
+        }
+    });
 	
 	Modernizr.load({
-			test: Modernizr.input.required,
-			yep: console.log('required works here!'),
-			nope: ['vendor/jquery.validate.min.js'],
-
+		test: Modernizr.input.required,
+		yep: console.log('required works here!'),
+		nope: ['vendor/jquery.validate.min.js']
+    });
 			// call jQuery Validate if required is not supported
-			complete: function () {
-				if (!Modernizr.input.required) {
-				$('form').each(function() {
-				$(this).validate();
-
-			});
-
-		}
-
-	}
-
-});
+			//complete: function () {
+			//	if (!Modernizr.input.required) {
+			//	$('form').each(function() {
+			//	$(this).validate();
 
 })();
-
-$.work()};
 
 
 

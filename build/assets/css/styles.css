@@ -6,6 +6,8 @@ body{
 	background-color: rgb(179,227,255);
 	width: 100%;
 	height: 100%;
+	font-family: 'Open Sans',sans-serif;
+	counter-reset:fieldset;
 }
 /*------------------------end_lightblue---------------*/
 
@@ -16,9 +18,9 @@ form{
 	margin-left: auto;
 	margin-right: auto;
 	width: 600px;
-	background-color: rgb(255,255,255);
+	background-color: #ffffff;
 	border-radius: 10px;
-	padding-bottom:1%;
+	padding-bottom: 40px;
 }
 /*-------------------------end_whiteform-----------------*/
 
@@ -42,7 +44,6 @@ header h1{
 
 /*-----------------------------50 projects...------------------*/
 header p{
-	font-family: 'Open Sans',sans-serif;
 	font-style: bold;
 	font-size:10pt;
 	color: rgb(172,227,255);
@@ -53,13 +54,34 @@ header p{
 
 /*------------------------fieldset_legend_number---------------*/
 fieldset{
-	border:none;
+	border:none;	
 }
 /*------------------------end_fieldset_legend_number---------------*/
 
 
 
 /*-------------------------fieldset_titles-------------------*/
+legend::before{
+	counter-increment:fieldset;
+	content:counter(fieldset);
+	font-family: 'Merriweather',serif;
+	color: rgb(255,255,255);
+	font-size:12pt;
+	font-style: normal;
+	text-align: center;
+	background-color: rgb(82,163,212);
+	width:100px;
+	height:100px;
+	border-radius: 50%;
+	border: 3px solid white;
+	margin-right:40px;
+	margin-left:-70px;
+	padding-left:8px;
+	padding-right:8px;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+
 legend{
 	font-family: 'Merriweather',serif;
 	color: rgb(10,94,120);
@@ -70,7 +92,6 @@ legend{
 
 label, p{
 	color: #6F7070;
-	font-family: 'Open Sans',sans-serif;
 	font-size: 8pt;
 	line-height: inherit;
 	display:block;
@@ -89,7 +110,6 @@ ul{
 /*----------------fieldset-gray_box_and_all_its_contents--------*/
 .fieldsetcontainer{
 	background-color: rgb(243,245,245);
-	font-family: 'Open Sans',sans-serif;
 	font-size:8pt;
 	border: none;
 	border-radius: 8px;
@@ -149,18 +169,19 @@ input:valid:focus + .email_sprite_valid {
 
 /*---------------------portfolio_address_sample_text-----------*/
 .sampletext{
-	position: absolute;
 	text-align: center;
-	width: 150px;
-	height: 20px;
-	top: 261px;
-	left: 357px;
-	padding-top:6px;
 	border-top-right-radius: 3px;
 	border-bottom-right-radius: 3px;
 	color: #888888;
-	background-color: #fafafa;
 	border-left: 1px solid #cbcbcb;
+	float:left;
+	width: 20%;
+	height:20px;
+	background-color: #fafafa;
+	text-align: center;
+	box-shadow: inset 0px 1.5px 0px 0px #cbcbcb;
+	padding-top:7px;
+
 
 }
 /*---------------------end_portfolio_address_sample_text-----------*/
@@ -172,7 +193,18 @@ input{
 	cursor:pointer;
 }
 
-input#portfolio_name, input#account_name, input#account_email, input#account_password, input#portfolio_address{
+input#portfolio_address{
+	float:left;
+	width:70%;
+	background: #fff;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+  	height:25px;
+  	box-shadow: inset 0px 1.5px 0px 0px #cbcbcb;
+  	border:none;
+}
+
+input#portfolio_name, input#account_name, input#account_email, input#account_password{
 	width:90%;
   	background: #fff;
   	border-radius: 5px;
@@ -208,26 +240,7 @@ input#security_code{
 }
 /*--------------end_password_note----------------------*/
 
-/*---------------------------circle_numbers-------------------------*/
-.number{
-	font-family: 'Merriweather',serif;
-	color: rgb(255,255,255);
-	font-size:12pt;
-	font-style: normal;
-	text-align: center;
-	background-color: rgb(82,163,212);
-	width:100px;
-	height:100px;
-	border-radius: 50%;
-	border: 3px solid white;
-	margin-right:40px;
-	margin-left:-70px;
-	padding-left:8px;
-	padding-right:8px;
-	padding-top:5px;
-	padding-bottom:5px;
-}
-/*------------------------end_circle_numbers---------------------------*/
+
 
 .creditcards{
 	margin-left:200px;
@@ -260,7 +273,9 @@ label.csv{
 	background: url('../images/sprite.png') no-repeat 0 -124px;
 	width: 62px; 
 	height: 32px;
+	display: inline-block;
 	margin-left:10px;
+	vertical-align:middle;
 }
 
 label.csv.amexpress {
@@ -277,8 +292,8 @@ input#amex + label{
 
 input#amex:checked +label{
 	background: url('../images/sprite.png') no-repeat 0 0; 
-	width: 44px; 
-	height: 32px;
+	width: 45px; 
+	height: 30px;
 }	
 
 input#visa + label{
@@ -290,7 +305,7 @@ input#visa + label{
 input#visa:checked + label{ 
 	background: url('../images/sprite.png') no-repeat -48px 0; 
 	width: 45px; 
-	height: 32px;
+	height: 30px;
 }
 
 input#discover + label{
@@ -302,7 +317,7 @@ input#discover + label{
 input#discover:checked + label{ 
 	background: url('../images/sprite.png') no-repeat -96px 0; 
 	width: 45px; 
-	height: 32px;
+	height: 30px;
 }
 
 input#mc + label{
@@ -315,14 +330,25 @@ input#mc + label{
 input#mc:checked + label{
 	background: url('../images/sprite.png') no-repeat -144px 0; 
 	width: 45px; 
-	height: 32px; 
+	height: 30px; 
 }
 
 
 li.expiration{
 	display; inline;
+		margin-top:-27px;
 }
 
+fieldset.expirationMonthYear{
+	margin-left:-8px;
+}
+
+
+
+legend.expirationDate{
+	text-indent: -9999px;
+	overflow: hidden;
+}
 #expirationDate_month, #expirationDate_year{
 	float:left;
 	width: auto;
@@ -330,31 +356,10 @@ li.expiration{
 	margin-right:15px;
 }
 
-
-/*------------------------securitycodesprites--------------------------*/
-
-/*.sprite_amex_secure label{
-	background: url('../images/sprite.png') no-repeat 0 -81px; 
-	width: 70px; 
-	height: 33px;
-}
-
-.sprite_allothers_secure label{
-	background: url('../images/sprite.png') no-repeat 0 -124px; 
-	width: 62px; 
-	height: 32px;
-}*/
-
-/*-----------------------end_securitycodesprites--------------------------*/
-
-
-
-
-
-
 /*--------submitbutton------------*/
 .button{
 	margin-left: 35%;
+
 }
 
 .createportfoliobutton{
@@ -363,5 +368,8 @@ li.expiration{
 	border-radius: 5px;
 	padding:5px;
 	font-size:10pt;
+	border: none;
+	font-family: inherit;
+	font-family: 'Merriweather',serif;
 }
 /*--------end_submitbutton------------*/

@@ -57,10 +57,10 @@
 		nope: ['vendor/jquery.validate.min.js']
     });
 			// call jQuery Validate if required is not supported
-			//complete: function () {
-			//	if (!Modernizr.input.required) {
-			//	$('form').each(function() {
-			//	$(this).validate();
+			complete: function () {
+			if (!Modernizr.input.required) {
+				$('form').each(function() {
+				$(this).validate();
 
 })();
 

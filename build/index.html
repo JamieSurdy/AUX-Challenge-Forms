@@ -23,32 +23,32 @@
 	<form>
 
 	<!--topsection-->
-		<header> 
+		<header role="banner"> 
 			<h1>Sign up for Whoo!</h1>
 				<p>50 projects, 500 images, 10 videos, domain binding, and technical support.</p>
 		</header>
 
 	<!--nameportfolio-->
 			<fieldset> 
-				<legend><span class="number">1</span>First, name your portfolio</legend>
+				<legend>First, name your portfolio</legend>
 				<ul class="fieldsetcontainer">
 					<li>
 						<label for="portfolio_name">Portfolio name</label>
 						<input id="portfolio_name" type="text" name="name" required>
-						<label class="name_sprite_valid"></label>
+						<label for class="name_sprite_valid"></label>
 					</li>
 
 					<li>
 						<label for="portfolio_address">Portfolio address</label>
 						<input id="portfolio_address" type="text" name="address" required>
-						<label class="sampletext">.sample.com</label>
+						<label for class="sampletext">.sample.com</label>
 					</li>
 				</ul>
 			</fieldset>
 
 	<!--acountdetails-->
 			<fieldset>
-				<legend><span class="number">2</span>Now, enter your account details</legend>
+				<legend>Now, enter your account details</legend>
 				<ul class="fieldsetcontainer">
 					<li>
 						<label for="account_name">Name</label>
@@ -58,8 +58,8 @@
 					<li>
 						<label for="account_email">Email</label>
 						<input id="account_email" type="email" name="email" required>
-						<label class="email_sprite_valid"></label>
-						<label class="note">NOTE: We'll never share your email, promise.</label>
+						<label for class="email_sprite_valid"></label>
+						<label for class="note">NOTE: We'll never share your email, promise.</label>
 					</li>
 
 					<li>
@@ -71,7 +71,7 @@
 
 	<!--paymentinfo-->
 			<fieldset>
-				<legend><span class="number">3</span>Finally, enter your payment information</legend>
+				<legend>Finally, enter your payment information</legend>
 				<ul class="fieldsetcontainer">
 					<li class="cardNumberInfo">
 						<label for="card_number">Credit Card Number</label>
@@ -79,6 +79,7 @@
 					</li>
 
 	<!--radiobuttons_for_cc-->
+
 					<li class="creditcards">
 						<input id="amex" type="radio" name="cardtype" value="amex" >
 						<label for="amex">American Express</label>
@@ -95,25 +96,16 @@
 		
 
 					<li class="security">
-						<label for="security_code" class="securityLabelText">Security Code</label>
+						<label for="security_code">Security Code</label>
 						<input id="security_code" type="text" name="code" minlength= "3" maxlength="4" required>
 						<label for="security_code" class="csv">CSV</label>
-					</li>
 
-	<!--radiobuttons_for_securitycc-->
-					<!-- <fieldset class="securitycardslist">
-						<legend>Security CVC Code</legend>
-							<ul class="securitycards">
-								<li class="sprite_amex_secure"><input id="securecode_1" type="radio" name="secure" value="amex" >
-									<label for="securecode_1">American Express Security Code</label></li>
-								
-								<li class="sprite_allothers_secure"><input id="securecode_2" type="radio" name="secure" value="others">
-									<label for="securecode_2">Visa, Mastercard, Discover Security Code</label></li>	
-							</ul>
-					</fieldset> -->
+					</li>
 
 
 	<!--expiration_month_year-->
+			<fieldset class="expirationMonthYear">
+				<legend class="expirationDate">Month and Year</legend>
 					<li class="expiration">
 						<label for="expirationDate">Expiration Date</label>
 
@@ -151,7 +143,7 @@
 							<option value="12">2015</option>
 						</select>
 					</li>
-				</ul>
+			</fieldset>
 	
 			</fieldset>
 
